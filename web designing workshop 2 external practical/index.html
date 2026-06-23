@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Result Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top">
+    <h2>Student Result Card</h2>
+    <p>Fill in your details and subject marks below</p>
+  </div>
+
+  <div class="form-section">
+    <label>Student Name</label>
+    <input type="text" id="studentName" placeholder="Enter your name" />
+  </div>
+
+  <div class="form-section">
+    <label>Roll Number</label>
+    <input type="text" id="rollNo" placeholder="Enter roll number" />
+  </div>
+
+  <div class="form-section">
+    <label>Class / Section</label>
+    <input type="text" id="classInfo" placeholder="e.g. 12-A or B.Tech CSE" />
+  </div>
+
+  <div class="subject-section">
+    <div class="col-heads">
+      <span>Subject</span>
+      <span>Max</span>
+      <span>Obtained</span>
+    </div>
+    <div id="subjectsGrid"></div>
+  </div>
+
+  <button class="btn" onclick="calculate()">Generate Result</button>
+
+  <div class="result" id="resultCard">
+
+    <div class="result-header">
+      <div class="rname" id="nameOut"></div>
+      <div class="rmeta" id="metaOut"></div>
+      <div class="rdate" id="dateOut"></div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="mlabel">Total</div>
+        <div class="mval" id="totalOut"></div>
+      </div>
+      <div class="metric">
+        <div class="mlabel">Percentage</div>
+        <div class="mval" id="pctOut"></div>
+      </div>
+      <div class="metric">
+        <div class="mlabel">Average</div>
+        <div class="mval" id="avgOut"></div>
+      </div>
+      <div class="metric">
+        <div class="mlabel">Grade</div>
+        <div class="mval" id="gradeOut"></div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th>Percentage</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody id="marksBody"></tbody>
+    </table>
+
+    <div class="status" id="statusBar"></div>
+
+    <div class="footer-note">
+      Computer generated result. No signature required.
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
